@@ -29,11 +29,12 @@ You will need a Unix/Linux system, some basic command line tools, and a C compil
 
 **Question**: I see some C code in this book. How much C do I need to know?
 
-**Answer**: You'll need to read and understand some C code in this book. You'll need basic understanding of arrays, pointers and print formatting. You can consult the free book [Modern C](https://hal.inria.fr/hal-02383654/file/ModernC.pdf) by [Jen Gustadt](https://gustedt.gitlabpages.inria.fr/modern-c/). The [CS50 Manual pages](https://manual.cs50.io) are also helpful to look up functions. You shouldn't spend too much time on learning C.
+**Answer**: You'll need to read and understand some C code in this book. You'll need basic understanding of arrays, pointers and print formatting. You can consult the free book [Dive into Systems: Chapter 1 and 2](https://diveintosystems.org/book/C1-C_intro/index.html). The [CS50 Manual pages](https://manual.cs50.io) are also helpful to look up functions. You shouldn't spend too much time on learning C.
 
 The code you'll read is fairly simple and presented in short fragments. The book helps you out quite a bit by manually introducing many C APIs such as the Process API, the Thread API, and so on. You can type, compile and run the code fragments, and read the corresponding explanations. The book explains them in great detail in a conversational style that's fun to read.
 
 You will also write a little bit of C code. Only a minority of the chapters (about 10 out of 50) ask you to write some C code (while the other chapters require you to run provided simulation code and answer questions). These are usually simple, short C programs that imitate the code that was presented in that chapter, with small modifications.
+When you're ready to start the homework, start with the [reverse project](https://github.com/billmei/ostep-projects/tree/billmei/patch-1/initial-reverse) this will be a good test to see if you're ready for the rest of the projects. For the rest of the hw projects use the link under course links.
 
 If you are getting stuck on these, please don't spend too much time on them. There is a great solution set [here](https://github.com/xxyzz/ostep-hw). There is no honor code for this, so you are free to use the solutions. If you find yourself spending too much time, feel free to read and understand the solutions instead. Your main priority should be to gain understanding of operating systems concepts, not to master C coding.
 
@@ -136,7 +137,7 @@ git clone https://github.com/mit-pdos/xv6-public src
 
 Please don't try to learn C from sites like GeeksforGeeks, TutorialsPoint, or Hackr.io (we're not even gonna link to them here). Those are great resources for other languages, but C has way too many pitfalls, and C tutorials online are often filled with dangerous errors and bad coding practices. We looked at many C resources for the recommendations below and unfortunately found *many* bad or unsafe ones; we'll only include the best ones here, so look no further!
 
-We recommend learning C by working through (the entirety of) Jens Gustedt's *Modern C*, which is [freely available online](https://hal.inria.fr/hal-02383654/file/ModernC.pdf). This book is relatively short and will bring you up to speed on the C language itself as well as modern coding practices for it. Make sure to do all the exercises in the footnotes!
+We recommend learning C by working through (the entirety of) Jens Gustedt's *Modern C*, which is [freely available online](https://inria.hal.science/hal-02383654v2/file/modernC.pdf). This book is relatively short and will bring you up to speed on the C language itself as well as modern coding practices for it. Make sure to do all the exercises in the footnotes!
 
 While the book above is our default recommendation, we also recommend K.N. King's [*C Programming: A Modern Approach*](http://www.knking.com/books/c2/) as a second, more beginner-friendly option. It has some disadvantages: it's much longer (almost 850 pages), it's not available for free (and copies can be hard to find), and it's not quite as recent as *Modern C* (but still relevant nonetheless). That said, it has more exercises if you want extra practice, and the Q&A sections at the end of each chapter are filled with pearls of C wisdom and answers to C FAQs. It also covers almost the entirety of the C language and standard library, so it doubles as a reference book.
 
@@ -161,6 +162,12 @@ The easiest way to do that is by watching a subset of the lectures from the *Com
 * [Machine-Level Programming IV: Data](https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=03308c94-fc20-40d8-8978-1a9b81c344ed)
 * [Machine-Level Programming V: Advanced Topics](https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3f0bf9ca-d640-4798-b91a-73aed656a10a)
 * [Linking](https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0aef84fc-a53b-49c6-bb43-14cb2b175249)
+
+Furthermore, it is recommened to do the following labs. These labs are meant to teach you how to work with assembly:
+* **Bomb Lab**: [Writeup](http://csapp.cs.cmu.edu/3e/bomblab.pdf), [self-study handout](https://csapp.cs.cmu.edu/3e/bomb.tar).
+  > A "binary bomb" is a program provided to students as an object code file. When run, it prompts the user to type in 6 different strings. If any of these is incorrect, the  bomb "explodes," printing an error message and logging the event on a grading server. Students must "defuse" their own unique bomb by disassembling and reverse engineering the program to determine what the 6 strings should be. The lab teaches students to understand assembly language, and also forces them to learn how to use a debugger. It's also great fun. A legendary lab among the CMU undergrads.
+* **Attack Lab**: [Writeup](http://csapp.cs.cmu.edu/3e/attacklab.pdf), [self-study handout](https://csapp.cs.cmu.edu/3e/target1.tar).
+  > Students are given a pair of unique custom-generated x86-64 binary executables, called targets, that have buffer overflow bugs. One target is vulnerable to code injection attacks. The other is vulnerable to return-oriented programming attacks. Students are asked to modify the behavior of the targets by developing exploits based on either code injection or return-oriented programming. This lab teaches the students about the stack discipline and teaches them about the danger of writing code that is vulnerable to buffer overflow attacks. **Note:** run the targets with the -q flag to prevent them from trying to contact a non-existent grading server.
 
 Additional (***optional***) resources include:
 * [CPU Registers x86](https://wiki.osdev.org/CPU_Registers_x86): good for looking up specific registers.
